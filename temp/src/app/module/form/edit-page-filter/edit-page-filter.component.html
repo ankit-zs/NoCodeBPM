@@ -1,0 +1,98 @@
+<div class="right-edit-div">
+    <div>
+        <div id="general-individual-button-div">
+            <button id="general-button" (click)="switchFilterGeneral()" [ngClass]="{
+                'blue-button' : filterView === 'general',
+                'white-button' : filterView === 'individual'
+            }">General</button>
+            <button id="individual-button" (click)="switchFilterIndividual()" [ngClass]="{
+                'white-button' : filterView === 'general',
+                'blue-button' : filterView === 'individual'
+            }">Individual</button>
+        </div>
+        <div class="right-edit-option-div" *ngIf="filterView === 'general' ">
+            <div id="font-option-div">
+                <p>Font Style</p>
+                <div id="font-dropdown-div">
+                    <select name="form-font" id=""form-font>
+                        <option value="Arial" style="font-family: Arial;">Arial</option>
+                        <option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+                        <option value="Times New Roman" style="font-family: Times New Roman;">Times New Roman</option>
+                        <option value="Poppins" style="font-family: Poppins;">Poppins</option>
+                        <option value="Courier New" style="font-family: Courier  New;">Courier  New</option>
+                        <option value="Courier" style="font-family: Courier;">Courier</option>
+                        <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                        <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                        <option value="Palatino" style="font-family: Palatino;">Palatino</option>
+                        <option value="Garamond" style="font-family: Garamond;">Garamond</option>
+                        <option value="Bookman" style="font-family: Bookman;">Bookman</option>
+                        <option value="Comic Sans MS" style="font-family: Comic Sans MS;">Comic Sans MS</option>
+                        <option value="Trebuchet MS" style="font-family: Trebuchet MS;">Trebuchet MS</option>
+                    </select>
+                </div>
+            </div>
+            <div id="color-option-div">
+                <div>
+                    <p>Question color</p>
+                    <input type="color" value="#68D2E8">
+                </div>
+                <div>
+                    <p>Answer color</p>
+                    <input type="color" value="#C73659">
+                </div>
+            </div>
+            <div id="form-name-div">
+                <div>Form Name</div>
+                <input type="text" placeholder="Enter form name">
+            </div>
+            <div id="form-pages-div">
+                <p>Pages</p>
+                <div>
+                    <p>1. Page 1</p>
+                    <div>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-edit-option-div" *ngIf="questionCard && filterView === 'individual' ">
+            <div id="individual-fiter-title-div">
+                <img src="{{questionCard.questionCardStructure.url}}" alt="{{questionCard.questionCardStructure.alt}}">
+                <p>{{questionCard.questionCardStructure.name}}</p>
+            </div>
+            <div *ngFor="let filter of filters">
+
+                <div id="button-switch-div" *ngIf="filter.type == 'button' ">
+                    <img src="assets/toggle-button/toggle-button-active.png" alt="toggle-button-active-icon" (click)="switchToggleButton(filter.filterId)"  *ngIf="filter.value === true">
+                    <img src="assets/toggle-button/toggle-button-inactive.png" alt="toggle-button-inactive-icon" (click)="switchToggleButton(filter.filterId)"  *ngIf="filter.value === false">
+                    <p>{{filter.text}}</p>
+                </div>
+
+                <div id="dropdown-div" *ngIf="filter.type == 'dropdown' ">
+                    <select name="validation" id="dropdown-validation">
+                        <option *ngFor="let dropdownItem of filter.options" value="dropdownItem">{{dropdownItem}}</option>
+                    </select>
+                </div>
+
+                <div id="custom-error-message-div" *ngIf="filter.type == 'input' ">
+                    <p>{{filter.title}}</p>
+                    <input type="text" placeholder="{{filter.placeholder}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="right-edit-option-div">
+    <div id="mandatory-or-not-div">
+        <img src="../assets/toggle-button/toggle-button-icon.png" alt="toggle-button-icon">
+        <p>Mandatory or Not?</p>
+    </div>
+    <div id="custom-error-message-div">
+        <div>Custom Error Message</div>
+        <input type="text" placeholder="Custom Error Field">
+    </div>
+</div> -->

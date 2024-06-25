@@ -1,0 +1,21 @@
+
+<div id="workflow-card-div">
+    <div *ngIf="cardType == 'data' ">
+        <div id="vertical-option-div">
+            <img src="../assets/vertical-dot/vertical-dot.png" alt="options">
+        </div>
+        <div id="workflow-card-data-div" *ngIf="workflow">
+                <h1 id="card-title">{{workflow.title}}</h1>
+                <h2 id="card-category">{{workflow.category}}</h2>
+                <p id="card-description">{{workflow.description}}</p>
+        </div>
+    </div>
+
+    <div *ngIf="cardType == 'create' ">
+        <div id="create-card-div">+ Create New</div>
+    </div>
+
+    <div *ngIf="cardType == 'comingSoon' ">
+        <div id="coming-soon-card-div">Coming Soon</div>
+    </div>
+</div> 

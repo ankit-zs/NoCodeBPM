@@ -1,0 +1,19 @@
+.root-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#workflow-hidden-form-div{
+    position: fixed; /* Fix the popup to the viewport */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Position at the left edge of the viewport */
+    width: 100%; /* Span the full width of the viewport */
+    height: 100%; /* Span the full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background color with transparency */
+    z-index: 999; /* Set a high z-index to ensure it's on top */
+    display: flex; /* Optionally use flexbox for alignment (optional) */
+    justify-content: center; /* Horizontally center the content (optional) */
+    align-items: center; /* Vertically center the content (optional) */
+}

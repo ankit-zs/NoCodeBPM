@@ -1,0 +1,72 @@
+<div class="center-div-container" *ngIf="questionCardStructure" (click)="cardToHighlight()" [ngClass]="{ 'highlight-card' : questionCardStructure.selected}">
+    <div class="center-div-container-option">
+        <img src="../assets/pluck-button/pluck-button-icon.png" alt="pluck-button-icon" id="pluck-button">
+        <img src="../assets/cross-button/cross-button-icon.png" alt="cross-button-icon" id="cross-button" (click)="deleteCard()">
+    </div>
+    
+
+    <div class="center-div-container-data" *ngIf="questionCardStructure.card.type === 'single-input'">
+        <div>
+            <sup>*</sup>{{questionCardStructure.card.data.title}}
+        </div>
+        <input type="text">
+    </div>
+
+    <div class="center-div-container-data" *ngIf="questionCardStructure.card.type === 'radio-box' ">
+        <div>
+            <sup>*</sup>{{questionCardStructure.card.data.title}}
+        </div>
+        <div *ngIf="questionCardStructure.name == 'true-false-format' ">
+            <input name="true-false-radio" type="radio" value="married"> True
+            <input name="true-false-radio" type="radio" value="not-married"> False
+        </div>
+        <div *ngIf="questionCardStructure.name == 'yes-no-format' ">
+            <input name="yes-no-radio" type="radio" value="yes"> Yes
+            <input name="yes-no-radio" type="radio" value="no"> No
+            <input name="yes-no-radio" type="radio" value="maybe"> Maybe
+        </div>
+    </div>
+
+    <div class="center-div-container-data" *ngIf="questionCardStructure.card.type === 'rating' ">
+        <div>
+            <sup>*</sup>{{questionCardStructure.card.data.title}}
+        </div>
+         <div>                                
+            <div> rating part goes here </div>
+            <input type="text" placeholder="Star"/>
+            <div> star counter goes here </div>  
+        </div>
+    </div>
+
+    <div class="center-div-container-data" *ngIf="questionCardStructure.card.type === 'file-upload' ">
+        <div>
+            <sup>*</sup>{{questionCardStructure.card.data.title}}
+        </div>
+        <input type="file">
+    </div>
+
+    <div class="center-div-container-data" *ngIf="questionCardStructure.card.type === 'multiple-mcq' ">
+        <div>
+            <sup>*</sup>{{questionCardStructure.card.data.title}}
+        </div>
+        <div>
+            <div> 
+                <div>1.</div>
+                <div>
+                    <input type="text" placeholder="Enter Your Option Here">
+                    <img src=""/>
+                </div>
+            </div>
+            <div> 
+                <div>2.</div>
+                <div>
+                    <input type="text" placeholder="Enter Your Option Here">
+                    <img src=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</div>

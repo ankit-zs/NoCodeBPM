@@ -1,0 +1,17 @@
+<div class="left-edit-div">
+    <div id="left-edit-div-title">
+        Drag or Double click to add section
+    </div>
+    <div id="left-edit-item-container">
+        
+        <app-edit-options *ngFor="let data of editOptions" [params]="data" pDraggable (dblclick)="emitDragElementData(data.cardStructureId)" (onDragStart)="emitDragElementData(data.cardStructureId)"></app-edit-options> 
+        
+    </div>
+    <div class="table-format-div">
+        <p>---------------------- Coming Soon ----------------------</p>
+        <div>
+            <img src="../../assets/edit-item-icon/table-format-icon.png" alt="table-format-icon">
+            <p>Table Format</p>
+        </div>
+    </div>
+</div>

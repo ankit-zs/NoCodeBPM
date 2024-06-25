@@ -1,0 +1,38 @@
+#edit-item-div {
+    width: 10.9rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #edit-item-icon{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+
+        > img {
+            width: 35%;
+            height: 32%;
+        }
+    }
+    #edit-item-text{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 60%;
+        p{
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+    }
+
+}

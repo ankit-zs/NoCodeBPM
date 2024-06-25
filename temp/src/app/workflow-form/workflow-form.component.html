@@ -1,0 +1,28 @@
+<div id="form-root-container">
+    <div class="form-container">
+        <div class="form-input-div">
+            <div class="form-workflow-name">
+                <div>
+                    Workflow Name:<sup>*</sup>
+                </div>
+                <input type="text" placeholder="Purchase Requisition">
+            </div>
+            <div class="form-category">
+                <div>
+                    Category:<sup>*</sup>
+                </div>
+                <input type="text" placeholder="Purchase">
+            </div>
+            <div class="form-description">
+                <div>
+                    Description
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="enter description here"></textarea>
+            </div>
+        </div>
+        <div class="form-submit-div">
+            <button id="form-cancel-button" (click)="showHomePage()">Cancel</button>
+            <button id="form-create-button" (click)="showEditPage()">Create</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<app-workflow-form *ngIf="isWorkFlowFormVisible; else homePageDiv"></app-workflow-form>
+
+<ng-template #homePageDiv>
+    <div class="content-div">
+        <div class="workflow-div">
+            <div id="workflow-div-title">
+                <h1>Your Workflow</h1>
+
+            </div>
+            <div id="workflow-div-grid">
+                
+                <app-workflow-card [cardType]="'create'" (click)="showWorkflowFormDiv()"></app-workflow-card>
+                <!-- <app-workflow-card [cardType]="'create'" pButton (click)="show()"></app-workflow-card> -->
+    
+                
+                <app-workflow-card *ngFor="let card of workFlowData" [workflow]="card" [cardType]="'data'"></app-workflow-card>
+    
+            </div>
+        </div>
+        <div class="pre-define-workflow-div">
+            <div id="pre-define-workflow-div-title">
+                <h1>Pre-Define Workflow</h1>
+            </div>
+            <app-workflow-card [cardType]="'comingSoon'"></app-workflow-card>
+    
+        </div>
+    </div>
+</ng-template>

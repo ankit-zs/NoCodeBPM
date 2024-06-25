@@ -1,0 +1,18 @@
+.page-not-found-root-div{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-height: 90vh;
+
+    > p {
+        width: 100vw;
+        height: 90vh;
+        height: 3rem;
+        font-size: 6rem;
+        opacity: 0.7;
+        text-align: center;
+    }
+}

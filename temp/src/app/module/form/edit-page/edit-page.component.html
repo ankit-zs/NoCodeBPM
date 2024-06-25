@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+
+<div class="edit-page-content-div">
+    
+    <app-edit-page-option (elementDrag)="addQuestionCardToFormPage($event)"></app-edit-page-option>
+
+    <app-edit-page-content [cardStructureId]="cardStructureId" (questionCardSelected)="changeIndividualFilter($event)"></app-edit-page-content>
+    <app-edit-page-filter [questionCard]="selectedCard"></app-edit-page-filter>
+    
+</div>

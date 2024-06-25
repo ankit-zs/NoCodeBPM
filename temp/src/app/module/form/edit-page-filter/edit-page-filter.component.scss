@@ -1,0 +1,223 @@
+.right-edit-div{
+    width: 25vw;
+    min-height: 40rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: flex-end;
+
+    > div {
+        width: 100%;
+        height: 25rem;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 1rem;
+
+        #general-individual-button-div{
+            padding: 0.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            box-sizing: border-box;
+
+            .blue-button{
+                color: white;
+                background-color: #50ADFF;
+                border-radius: 4px;
+                border: none;
+                width: 5.5rem;
+                height: 2.2rem;
+                font-weight: 400;
+                font-size: 0.9rem;
+                margin: 0.5rem;
+            }
+            .white-button{
+                color: black;
+                opacity: 0.8;
+                background-color: white;
+                border-radius: 4px;
+                border: none;
+                width: 5.5rem;
+                height: 2.2rem;
+                font-weight: 400;
+                font-size: 0.9rem;
+                margin: 0.5rem;
+            }
+            .white-button:hover{
+                border: 1px solid black;
+            }
+        }
+        .right-edit-option-div{ 
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 1rem;
+
+            #individual-fiter-title-div{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                box-shadow: inset 0px 0px 5px 0px #d8d2d2;
+                width: 95%;
+                height: 2.6rem;
+                border-radius: 7px;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+
+                > img {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin-left: 1rem;
+                }
+                >p{
+                    font-size: medium;
+                    font-weight: 400;
+                    opacity: 0.8;
+                    margin-left: 1rem;
+                }
+            }
+            #button-switch-div{
+
+                display: flex;
+                align-items: center;
+                width: 95%;
+                height: 2.6rem;
+                border-radius: 7px;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                >img{
+                    margin-left: 0.1rem;
+                }
+                >p{
+                    margin-left: 1rem;
+                }
+            }
+            #custom-error-message-div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                display: flex;
+                flex-direction : column;
+                height: 5.5rem;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+
+                > div{
+                    font-size: medium;
+                    font-weight: 400;
+                    opacity: 0.8;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+                >input{
+                    width: 95%;
+                    height: 2.6rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                    padding-left: 0.2rem;
+                    box-sizing: border-box;
+                    font-size: medium;
+                    border:none;
+                    border-bottom: 1px solid grey;
+                    opacity: 0.6;
+                }
+            }
+            #dropdown-div{
+                width: 100%;
+                > select{
+                    background-color: white;
+                    box-shadow: inset 0px 0px 5px 0px #d8d2d2;
+                    width: 95%;
+                    height: 2.6rem;
+                    border-radius: 7px;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                    border: none;
+                    padding-left: 1rem;
+                }
+            }
+
+            // general filterview css
+
+            #font-option-div{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                > p {
+                    font-size: small;
+                    opacity: 0.8;
+                }
+
+                #font-dropdown-div{
+                    width: 100%;
+                    > select{
+                        background-color: white;
+                        box-shadow: inset 0px 0px 5px 0px #d8d2d2;
+                        width: 95%;
+                        height: 2.6rem;
+                        border-radius: 7px;
+                        margin-bottom: 0.4rem;
+                        border: none;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+            #color-option-div{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 95%;
+                padding-left: 0.2rem;
+                margin-bottom: 1rem;
+                border-bottom: 2px dashed #8b8b8b61;
+
+                > div{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    > p{
+                        font-size: medium;
+                        opacity: 0.7;
+                    }
+                    > input{
+                        width: 1.3rem;
+                        height: 1rem;
+                        border: none;
+                        margin: 0%;
+                        padding: 0%;
+                    }
+                }
+            }
+            #form-name-div{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-top: 1rem;
+
+                >input{
+                    width: 95%;
+                    height: 2.6rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
+                    padding-left: 0.2rem;
+                    box-sizing: border-box;
+                    font-size: medium;
+                    border:none;
+                    border-bottom: 1px solid rgb(163, 163, 163);
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

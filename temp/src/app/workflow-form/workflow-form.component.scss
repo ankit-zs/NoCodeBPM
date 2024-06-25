@@ -1,0 +1,91 @@
+#form-root-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+
+.form-container{
+    width: 33vw;
+    height: 33rem;
+    box-shadow: 0 1px 5px 0 rgba(101, 95, 95, 0.3);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .form-input-div{
+        height: 72%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        >div{
+            font-size: large;
+            opacity: 0.7;
+            font-weight: 400;
+            width: 80%;
+            box-sizing: border-box;
+
+            >input, textarea{
+                width: 100%;
+                box-sizing: border-box;
+                height: 2.5rem;
+                border: none;
+                border-bottom: 1px solid #8b8b8b;
+                font-size: large;
+            }
+            >textarea{
+                padding-top: 0.5rem;
+            }
+
+            > div {
+                box-sizing: border-box;
+                color: #7130ff;
+
+                >sup{
+                    color: red;
+                    font-size: large;
+                }
+            }
+        }
+    }
+    .form-submit-div{
+        height: 28%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            
+        #form-cancel-button{
+          height: 3.5rem;
+            width: 8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #7130ff;
+            opacity: 0.7;
+            font-size: large;
+            margin-right: 0.5rem;
+            margin-left: 8rem;
+        }
+        #form-cancel-button:hover{
+            border: 1px solid rgb(71, 67, 67);
+        }
+        #form-create-button{
+            height: 3rem;
+            width: 9rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #7130ff;
+            opacity: 0.65;
+            color: white;
+            font-size: large;
+
+        }
+    }
+}
